@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cartbg"
+    tools:context=".ui.OrdersFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/shopping_cart_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="107dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Shopping Cart"
+        android:textColor="@color/primary_text_color"
+        android:textSize="24sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/items_in_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopping_cart_text"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/_3_items_in_shopping_cart"
+        android:textColor="@color/secondary_variant_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_items_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/items_in_cart"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/order_button"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/cart_items_recycler_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
+        android:backgroundTint="@color/green_700"
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Total"
+                android:textColor="@color/white" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nunito_sans"
+                android:text="$"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="95.97"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="80dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontFamily="@font/nunito_sans_bold" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_right" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

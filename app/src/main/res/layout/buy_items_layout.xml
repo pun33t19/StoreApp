@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:layout_marginTop="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buy_item_card"
+        android:layout_width="84dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@color/green_200"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/green_dark" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/buy_item_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/coffee" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/buy_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@id/buy_item_card"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Bubble Tea"
+        android:textColor="@color/secondary_text_color" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/buy_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buy_item_name"
+        android:layout_alignStart="@id/buy_item_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/buy_item_card"
+        android:text="Good day time"
+        android:textColor="@color/secondary_variant_color"
+        android:textSize="13sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/buy_item_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="56.99"
+        android:textColor="#647039"
+        android:textSize="25sp" />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:layout_toStartOf="@id/price_text"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/secondary_text_color"
+        android:fontFamily="@font/nunito_sans"
+        android:layout_marginEnd="5dp"
+        />
+
+
+
+
+
+        
+
+</RelativeLayout>

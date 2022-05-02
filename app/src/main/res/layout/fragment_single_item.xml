@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/single_item_bg"
+    tools:context=".ui.SingleItemFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="@string/lemon_tea"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/good_day_time"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_price_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:text="$"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_time"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="12.99"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_time"
+        app:layout_constraintVertical_bias="0.042" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="449dp"
+        android:background="@drawable/card_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="-23dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/particulars_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Particulars"
+            android:textColor="@color/text_color"
+            android:textSize="25sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/particulars_text_view"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/nunito_sans"
+            android:textSize="12sp"
+            android:layout_marginEnd="17dp"
+            android:inputType="textMultiLine"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/star1"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:layout_below="@id/item_desc"
+                android:layout_marginTop="10dp"
+                android:layout_alignStart="@id/item_desc"
+                />
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/star2"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:layout_below="@id/item_desc"
+                android:layout_toEndOf="@id/star1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5.48dp"
+                />
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/star3"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:layout_below="@id/item_desc"
+                android:layout_toEndOf="@id/star2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5.48dp"
+                />
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/star4"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:layout_below="@id/item_desc"
+                android:layout_toEndOf="@id/star3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5.48dp"
+                />
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/star5"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_star"
+                android:layout_below="@id/item_desc"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/star4"
+                android:layout_marginStart="5.48dp"
+                />
+        
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/star1"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/card_small_bg"
+            app:cardCornerRadius="10dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 ml"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="6dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/star1"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/card1"
+            android:backgroundTint="@color/card_small_bg"
+            app:cardCornerRadius="10dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Less Ice"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="6dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@id/star1"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/card2"
+            android:backgroundTint="@color/card_small_bg"
+            app:cardCornerRadius="10dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sugar"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="6dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/services_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card1"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="39dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="Services"
+            android:textColor="@color/text_color"
+            android:textSize="24sp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dummy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum is simply dummy text of the printing and "
+            android:fontFamily="@font/nunito_sans"
+            android:textSize="12sp"
+            android:textColor="@color/text_color"
+            android:layout_below="@id/services_text"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/again"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_again"
+            android:layout_below="@id/dummy_text"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="37dp"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/heart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/heart"
+            android:layout_below="@id/dummy_text"
+            android:layout_toEndOf="@id/again"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="26dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/green_700"
+            android:layout_toEndOf="@id/heart"
+            android:layout_below="@id/dummy_text"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="28dp"
+            app:cornerRadius="25dp"
+            android:text="Purchase"
+            />
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="99dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/coffeelarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/item_price"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="99dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/coffeelarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/item_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

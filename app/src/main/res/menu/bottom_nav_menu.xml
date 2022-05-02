@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/storeFragment"
+        android:title="Store"
+        android:icon="@drawable/ic_store"
+        android:color="@color/secondary_text_color"/>
+
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="@string/home"
+        android:icon="@drawable/ic_vector"
+        android:checked="true"
+        android:color="@color/secondary_text_color"/>
+
+    <item
+        android:id="@+id/ordersFragment"
+        android:title="Orders"
+        android:icon="@drawable/orders"
+        android:color="@color/secondary_text_color"/>
+
+
+
+
+
+
+</menu>

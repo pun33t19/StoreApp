@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="@string/hello_john"
+        android:textColor="@color/primary_text_color"
+        android:textSize="25sp" />
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/search_bar"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:layout_below="@id/name_text_view"
+           android:layout_marginTop="40dp"
+           android:layout_marginEnd="30dp"
+           app:boxCornerRadiusBottomEnd="50dp"
+           app:boxCornerRadiusBottomStart="50dp"
+           app:boxCornerRadiusTopEnd="50dp"
+           app:boxCornerRadiusTopStart="50dp"
+           app:startIconDrawable="@drawable/ic_baseline_search_24"
+           app:boxStrokeWidth="0dp"
+           app:boxStrokeWidthFocused="0dp"
+           app:hintEnabled="false"
+           android:layout_marginStart="30dp"
+           >
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@drawable/search_bg"
+               android:hint="Search"
+                android:paddingTop="12dp"
+               />
+       </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lner_drink_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:orientation="horizontal"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/recommendation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommendation"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="18sp"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/black_tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Black Tea"
+            android:layout_marginStart="19dp"
+            android:fontFamily="@font/nunito_sans"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/green_tea"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Green Tea"
+            android:layout_marginStart="19dp"
+            android:fontFamily="@font/nunito_sans"
+            android:textColor="@color/primary_text_color"
+            android:textSize="18sp"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drinks_recycler_view"
+        style="@style/scrollbar_shape_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lner_drink_items"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="22dp"
+        android:orientation="horizontal" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/will_buy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/drinks_recycler_view"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="54dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:text="Will Buy"
+        android:textColor="#262424" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/will_buy_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/will_buy_text_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
